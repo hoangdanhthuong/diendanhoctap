@@ -1,0 +1,84 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Time New Roman";
+}
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+
+}
+.navbar {
+  background-color:;
+  padding:0 10px;
+}
+.navbar ul li{
+  padding: 0 10px;
+}
+.navbar ul li a{
+  font-size: 16px;
+  font-weight: bold;
+
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+.carousel-inner img {
+  width: 100%; /* Set width to 100% */
+  margin: auto;
+  min-height:200px;
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none; 
+  }
+}
+.navbar-inverse .btn-link {
+  color: #9d9d9d;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.navbar-inverse .btn-link:hover{
+  text-decoration: none;
+}
+.navbar-inverse .btn-link:active{
+  text-decoration: none;
+}
+/*Đăng bài*/
+#dang_bai{
+  background: lightgrey;
+}
+/*Thống kê bài viết*/
+#thongke{
+  background: lightgreen;
+}
+.tieu_de h3{
+  border-radius: 5px;
+  padding: 10px;
+}
+.thumbnail img {
+  
+}
+.nav .dropdown:hover .dropdown-menu{
+  display: block;
+}
+.dropdown-menu{
+  background-color: white;
+
+}
+.dropdown-menu li a{
+  color: black;
+  font-weight: normal;
+}
+.navbar a{
+  font-weight: bold;
+  text-transform: uppercase;
+}
