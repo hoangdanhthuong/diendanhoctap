@@ -23,6 +23,6 @@
 			</div>
 
 			<!-- end modal search -->
-		</ul>
+		</div>
 	</div>
 </div>
