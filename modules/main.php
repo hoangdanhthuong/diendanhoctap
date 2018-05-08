@@ -1,6 +1,5 @@
 <?php
 include("modules/content/trang_chu.php");
-session_start();
 if(!isset($_SESSION['dang_nhap_dien_dan'])){
 	include('modules/content/dang_ky.php');
 	include('modules/content/dang_nhap.php');	
