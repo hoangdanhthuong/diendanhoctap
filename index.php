@@ -8,14 +8,14 @@
 	
 	<link rel="stylesheet" type="text/css" href="style/login.css">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
-
+	<link rel="stylesheet" type="text/css" href="style/style_footer.css">
 </head>
 <body>
 	<?php
 		include('admin/modules/config.php');
 		include('modules/navbar.php');
 		include('modules/main.php');
-		include('modules/footer.php');
+		include('modules/footer_main.php');
 	?>
 	<script src="jquery/jquery.min.js"></script>
 	<script src="jquery/myscript.js"></script>

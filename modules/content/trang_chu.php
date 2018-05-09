@@ -1,8 +1,18 @@
+
+
+
 <?php
 session_start();
 ?>
 <!-- start contetn -->
-<div class="container" style="padding-top: 50px">
+<div class="container">
+	<div class="row">
+		<div class="img_banner">
+			<img src="image/header.jpg" alt="">
+		</div>
+	</div>
+</div>
+<div class="container">
 	<?php
 	if(isset($_SESSION['dang_nhap_dien_dan'])){
 		include('modules/content/bai_viet/them.php');

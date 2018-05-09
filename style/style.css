@@ -17,7 +17,7 @@ body{
   padding: 0 10px;
 }
 .navbar ul li a{
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 
 }
@@ -79,6 +79,15 @@ footer {
   font-weight: normal;
 }
 .navbar a{
+  color:#03224a;
   font-weight: bold;
   text-transform: uppercase;
+}
+.img_banner img{
+  width: 100%;
+  padding:0;
+  margin:0;
+}
+.menu_right ul li:nth-child(2){
+  padding-right: 0;
 }
