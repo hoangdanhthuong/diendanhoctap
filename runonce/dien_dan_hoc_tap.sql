@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 08, 2018 lúc 05:25 CH
+-- Thời gian đã tạo: Th5 09, 2018 lúc 05:50 CH
 -- Phiên bản máy phục vụ: 10.1.21-MariaDB
 -- Phiên bản PHP: 5.6.30
 
@@ -46,6 +46,31 @@ INSERT INTO `admin` (`id`, `ten_dang_nhap`, `mat_khau`, `email`, `quyen`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `cau_hoi`
+--
+
+CREATE TABLE `cau_hoi` (
+  `id` int(11) NOT NULL,
+  `tieu_de` varchar(255) NOT NULL,
+  `noi_dung` text NOT NULL,
+  `hinh_anh` varchar(255) NOT NULL,
+  `ten_dang_nhap` varchar(255) NOT NULL,
+  `ngay_tao` date NOT NULL,
+  `tinh_trang` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `cau_hoi`
+--
+
+INSERT INTO `cau_hoi` (`id`, `tieu_de`, `noi_dung`, `hinh_anh`, `ten_dang_nhap`, `ngay_tao`, `tinh_trang`) VALUES
+(1, 'Lỗi màn hình xanh ', 'man hinh xanh', 'uploads/1000000.png', 'nguyenhuungoc', '2018-05-09', 1),
+(2, 'Học tiếng anh cần những gì', 'Em đang cần học tiếng anh', 'uploads/1000000.jpg', 'nguyenhuungoc', '2018-05-09', 1),
+(3, 'Hôm nay là thứ mấy', 'Chắc chắn là thứ hai', 'uploads/8390228.jpg', 'nguyenhuungoc', '2018-05-09', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `chi_tiet_khoa_hoc`
 --
 
@@ -62,6 +87,32 @@ CREATE TABLE `chi_tiet_khoa_hoc` (
   `ten_dang_nhap` varchar(255) NOT NULL,
   `hinh_anh` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `chu_de`
+--
+
+CREATE TABLE `chu_de` (
+  `id` int(11) NOT NULL,
+  `ten` varchar(255) NOT NULL,
+  `id_loai_tin` int(11) NOT NULL,
+  `thu_tu` int(11) NOT NULL,
+  `tinh_trang` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `chu_de`
+--
+
+INSERT INTO `chu_de` (`id`, `ten`, `id_loai_tin`, `thu_tu`, `tinh_trang`) VALUES
+(1, 'Vật lý', 3, 6, 1),
+(2, 'Lập trình C#', 2, 0, 1),
+(5, 'Học lập trình PHP ', 3, 2, 1),
+(6, 'Học tiếng anh ', 3, 3, 1),
+(10, 'Toán học', 3, 8, 1),
+(11, '123', 3, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -115,7 +166,6 @@ CREATE TABLE `thanh_vien` (
   `mat_khau` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `ho_ten` varchar(25) NOT NULL,
-  `trinh_do` int(11) NOT NULL,
   `quyen` int(11) NOT NULL,
   `tinh_trang` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -124,8 +174,8 @@ CREATE TABLE `thanh_vien` (
 -- Đang đổ dữ liệu cho bảng `thanh_vien`
 --
 
-INSERT INTO `thanh_vien` (`id`, `ten_dang_nhap`, `mat_khau`, `email`, `ho_ten`, `trinh_do`, `quyen`, `tinh_trang`) VALUES
-(1, 'nguyenhuungoc', '12345', 'ngoc@gmail.com', 'Nguyễn Hữu Ngọc', 1, 2, 1);
+INSERT INTO `thanh_vien` (`id`, `ten_dang_nhap`, `mat_khau`, `email`, `ho_ten`, `quyen`, `tinh_trang`) VALUES
+(1, 'nguyenhuungoc', '12345', 'ngoc@gmail.com', 'Nguyễn Hữu Ngọc', 2, 1);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -138,9 +188,21 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Chỉ mục cho bảng `cau_hoi`
+--
+ALTER TABLE `cau_hoi`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `chi_tiet_khoa_hoc`
 --
 ALTER TABLE `chi_tiet_khoa_hoc`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `chu_de`
+--
+ALTER TABLE `chu_de`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -171,10 +233,20 @@ ALTER TABLE `thanh_vien`
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
+-- AUTO_INCREMENT cho bảng `cau_hoi`
+--
+ALTER TABLE `cau_hoi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
 -- AUTO_INCREMENT cho bảng `chi_tiet_khoa_hoc`
 --
 ALTER TABLE `chi_tiet_khoa_hoc`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT cho bảng `chu_de`
+--
+ALTER TABLE `chu_de`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT cho bảng `khoa_hoc`
 --
@@ -184,12 +256,12 @@ ALTER TABLE `khoa_hoc`
 -- AUTO_INCREMENT cho bảng `loai_tin`
 --
 ALTER TABLE `loai_tin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT cho bảng `thanh_vien`
 --
 ALTER TABLE `thanh_vien`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

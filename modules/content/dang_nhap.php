@@ -1,5 +1,6 @@
 <!-- Modal login -->
-<div class="modal fade" id="login" role="dialog">
+
+<div class="modal fade" id="dangnhap" role="dialog">
 	<div class="modal-dialog">
 		<!-- Modal content -->
 		<div class="modal-content">
@@ -26,8 +27,7 @@
 				</form>
 			</div>
 			<div class="modal-footer">
-				<p>Không phải là thành viên? <a href="">Đăng ký</a></p>
-				<p><a href="">Quên mật khẩu</a></p>
+				<p>Không phải là thành viên? <a href="index.php?xem=dangky">Đăng ký</a></p>
 			</div>
 
 		</div>

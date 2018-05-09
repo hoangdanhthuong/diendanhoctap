@@ -44,9 +44,17 @@ $row = mysqli_fetch_assoc($result);
         <div class="form-group">
           <label class="control-label col-sm-3" for="tinh_trang">Tình trạng:</label>
           <div class="col-sm-9"> 
-            <select name="tinh_trang" class="form-control" value="<?php echo $row['tinh_trang'];?>">
-              <option value="1">Kích hoạt</option>
-              <option value="0">Không kích hoạt</option>
+            <select name="tinh_trang" class="form-control" >
+              <?php
+                if($row['tinh_trang']==1){
+                  echo '<option value="1" selected>Kích hoạt</option>
+              <option value="0">Không kích hoạt</option>';
+                }else{
+                  echo '<option value="1">Kích hoạt</option>
+              <option value="0" selected="seleceted">Không kích hoạt</option>';
+                }
+              ?>
+              
             </select>
           </div>
         </div>

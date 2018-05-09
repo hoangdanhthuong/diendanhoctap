@@ -3,6 +3,8 @@
 
 <?php
 session_start();
+$sql_new = "SELECT a.*, b.ho_ten FROM cau_hoi a, thanh_vien  b WHERE (a.ten_dang_nhap=b.ten_dang_nhap or b.email = a.ten_dang_nhap) and a.tinh_trang = 1 order by a.id desc limit 0,5";
+$result_new = mysqli_query($conn, $sql_new);
 ?>
 <!-- start contetn -->
 <div class="container">
@@ -18,44 +20,29 @@ session_start();
 		include('modules/content/bai_viet/them.php');
 	}
 	?>
-	<div class="row" id="thongke">
+	<div class="row" >
 		<div class="col-sm-8">
 			<div class="container-fluid">
 				<div class="tieu_de row ">
 					<h3 class="bg-primary">Thống kê bài viết</h3>
 				</div>
-				<table class="table table-hover">
+				<table class="table" >
 					<thead>
 						<tr>
-							<th class="col-sm-10">Bài viết mới</th>
-							<th class="col-sm-2">Người gửi cuối</th>
+							<th class="col-sm-9">Bài viết mới</th>
+							<th class="col-sm-3">Người gửi cuối</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td><a href="">aaaaa</a></td>
-							<td>aaaaa</td>
-						</tr>
-
-						<tr>
-							<td><a href="">aaaaa</a></td>
-							<td>aaaaa</td>
-						</tr>
-
-						<tr>
-							<td><a href="">aaaaa</a></td>
-							<td>aaaaa</td>
-						</tr>
-
-						<tr>
-							<td><a href="">aaaaa</a></td>
-							<td>aaaaa</td>
-						</tr>
-
-						<tr>
-							<td><a href="">aaaaa</a></td>
-							<td>aaaaa</td>
-						</tr>
+						<?php
+						while($row = mysqli_fetch_assoc($result_new)) {
+							
+							echo "<tr>
+							<td><a href='index.php?xem=baiviet&id=".$row['id']."'>".$row['tieu_de']."</a></td>
+							<td><b>".$row['ho_ten'].'</b><br/>'.$row['ngay_tao']."</td>
+							</tr>";
+						}
+						?>
 					</tbody>
 				</table>
 			</div>

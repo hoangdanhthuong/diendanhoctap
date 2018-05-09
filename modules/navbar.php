@@ -1,4 +1,8 @@
 <!-- start nav -->
+<?php
+$sql = "SELECT * FROM chu_de WHERE tinh_trang =1 order by thu_tu";
+$result = mysqli_query($conn, $sql);
+?>
 <div class="container-fluid">
 	<div class="bg-primary" >
 		<nav class="navbar navbar-light navbar-fixed-top" style="background-color: #e3f2fd; ">
@@ -8,14 +12,16 @@
 				</div> -->
 				<ul class="nav navbar-nav">
 					<li><a class="navbar-brand" href="index.php">TuHoc.Com</a></li>
-					<li class="dropdown"><a href="#">Khóa học</a>
+					<li class="dropdown"><a href="index.php?xem=chude">Khóa học</a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Page 1-1</a></li>
-							<li><a href="#">Page 1-2</a></li>
-							<li><a href="#">Page 1-3</a></li>
+							<?php
+								while($row = mysqli_fetch_assoc($result)){
+									echo '<li><a href="index.php?xem=khoahoc&id='.$row['id'].'">'.$row['ten'].'</a></li>';
+								}
+							?>
 						</ul>
 					</li>
-					<li ><a href="#">Hỏi đáp</a></li>
+					<li ><a href="index.php?xem=chude">Hỏi đáp</a></li>
 					<li><a href="#">Tài liệu</a></li>
 					<li><a href="#">Giới thiệu</a></li>
 					<li><a href="#">Đóng góp</a></li>
@@ -30,7 +36,7 @@
 					if(!isset($_SESSION['dang_nhap_dien_dan'])){
 						?>
 						<li class="dangky"><a href="#" data-toggle = "modal" data-target = "#signup"><span class="glyphicon glyphicon-user"  ></span> Đăng ký</a></li>
-						<li><a href="#" data-toggle = "modal" data-target = "#login"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+						<li class="dangky"><a href="index.php?xem=dangnhap" ><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
 						<?php
 					}else{
 						?>
