@@ -10,6 +10,8 @@ if($tam == "dangky"){
 	include("modules/content/nguoi_dung/dang_nhap.php");
 }elseif($tam =="chude"){
 	include("modules/content/chu_de/danh_sach.php");
+}elseif($tam =="gioithieu"){
+	include("modules/content/gioi_thieu.php");
 }else{
 	include("modules/content/trang_chu.php");	
 }

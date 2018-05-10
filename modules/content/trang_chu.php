@@ -93,9 +93,9 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 				<div class="col-sm-3" >
 					<div class="thumbnail" >
 						<a href="/w3images/lights.jpg">
-							<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<img src="image/hoc_php.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 							<div class="caption">
-								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình PHP</p>
 							</div>
 						</a>
 					</div>
@@ -103,9 +103,9 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 				<div class="col-sm-3" >
 					<div class="thumbnail" >
 						<a href="/w3images/lights.jpg">
-							<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<img src="image/111.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 							<div class="caption">
-								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình PHP</p>
 							</div>
 						</a>
 					</div>
@@ -113,9 +113,9 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 				<div class="col-sm-3" >
 					<div class="thumbnail" >
 						<a href="/w3images/lights.jpg">
-							<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<img src="image/112.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 							<div class="caption">
-								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình C#</p>
 							</div>
 						</a>
 					</div>
@@ -125,9 +125,9 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 				<div class="col-sm-3" >
 					<div class="thumbnail" >
 						<a href="/w3images/lights.jpg">
-							<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<img src="image/113.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 							<div class="caption">
-								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình PHP</p>
 							</div>
 						</a>
 					</div>
@@ -135,9 +135,9 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 				<div class="col-sm-3" >
 					<div class="thumbnail" >
 						<a href="/w3images/lights.jpg">
-							<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<img src="image/114.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 							<div class="caption">
-								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình C/C++</p>
 							</div>
 						</a>
 					</div>
@@ -145,9 +145,9 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 				<div class="col-sm-3" >
 					<div class="thumbnail" >
 						<a href="/w3images/lights.jpg">
-							<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<img src="image/115.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 							<div class="caption">
-								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Java</p>
 							</div>
 						</a>
 					</div>
@@ -155,9 +155,9 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 				<div class="col-sm-3" >
 					<div class="thumbnail" >
 						<a href="/w3images/lights.jpg">
-							<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<img src="image/116.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 							<div class="caption">
-								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Java</p>
 							</div>
 						</a>
 					</div>
@@ -186,23 +186,23 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 								<td>Sách mới nhất</td>
 							</tr>
 							<tr>
-								<td>Lập trình C#</td>
-								<td>222</td>
-								<td>Sách mới nhất</td>
+								<td>Lập trình C++</td>
+								<td>333</td>
+								<td>Bài mới nhất</td>
 							</tr>
 							<tr>
-								<td>Lập trình C#</td>
-								<td>222</td>
-								<td>Sách mới nhất</td>
+								<td>Lập trình C</td>
+								<td>444</td>
+								<td>Video mới nhất</td>
 							</tr>
 							<tr>
-								<td>Lập trình C#</td>
-								<td>222</td>
-								<td>Sách mới nhất</td>
+								<td>Lập trình Java</td>
+								<td>555</td>
+								<td>Ngôn ngữ hay nhất</td>
 							</tr>
 							<tr>
-								<td>Lập trình C#</td>
-								<td>222</td>
+								<td>Lập trình Php</td>
+								<td>666	</td>
 								<td>Sách mới nhất</td>
 							</tr>
 						</tbody>
@@ -229,12 +229,24 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 					</thead>
 					<tbody>
 						<tr>
-							<td>Vui chơi - Giải trí</td>
-							<td>So sánh giữa ba cộng đồng học tập forumvi lớn nhất..</td>
+							<td> <a>Vui chơi - Giải trí</a></td>
+							<td> <a>So sánh giữa ba cộng đồng học tập forumvi lớn nhất..</a></td>
 						</tr>
 						<tr>
-							<td>Vui chơi - Giải trí</td>
-							<td>So sánh giữa ba cộng đồng học tập forumvi lớn nhất..</td>
+							<td><a>Thư giãn - Giải trí</a></td>
+							<td> <a>Cùng vui chơi với chúng tôi..</a></td>
+						</tr>
+						<tr>
+							<td> <a>Nghe nhạc </a></td>
+							<td><a>Nghe nhạc tiếng anh hay..</a></td>
+						</tr>
+						<tr>
+							<td><a>Đọc sách</a></td>
+							<td><a>Đọc sách lập trình hay nhất..</a></td>
+						</tr>
+						<tr>
+							<td><a>Đọc truyện</a></td>
+							<td><a>So sánh giữa ba cộng đồng học tập forumvi lớn nhất..</a></td>
 						</tr>
 					</tbody>
 				</table>

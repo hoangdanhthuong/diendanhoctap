@@ -50,7 +50,7 @@ $result = mysqli_query($conn, $sql);
 							?>
 						</ul>
 					</li>
-					<li><a href="#">Giới thiệu</a></li>
+					<li><a href="index.php?xem=gioithieu">Giới thiệu</a></li>
 					<li><a href="#">Đóng góp</a></li>
 					<li>
 						<button type="button" class="btn btn-link btn-md" style="margin-top: 10px" data-toggle="modal" data-target="#modalSearch">	<span class="glyphicon glyphicon-search"></span></button>

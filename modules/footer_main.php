@@ -11,10 +11,10 @@
                     <h1 class="title-widget">CÁC LIÊN KẾT</h1>
                     
                     <ul>
-                       <li><a  href="#"><i class="fa fa-angle-double-right"></i> Bộ Giáo dục và Đào tạo</a></li>
-                       <li><a  href="#"><i class="fa fa-angle-double-right"></i> Trung tâm Đào tạo E-learning</a></li>
-                       <li><a  href="#"><i class="fa fa-angle-double-right"></i> Trung tâm Đào tạo ĐHV</a></li>
-                       <li><a  href="#"><i class="fa fa-angle-double-right"></i> Văn phòng khoa</a></li>
+                       <li><a  href="#"><i class="fa fa-angle-double-right"></i> Thích tiếng anh</a></li>
+                       <li><a  href="#"><i class="fa fa-angle-double-right"></i> Lập trình VB.net</a></li>
+                       <li><a  href="#"><i class="fa fa-angle-double-right"></i> Tài liệu miễn phí</a></li>
+                       <li><a  href="#"><i class="fa fa-angle-double-right"></i> CNTT Đại học vinh</a></li>
                    </ul>
                    
                </li>
@@ -32,12 +32,12 @@
             
            <li class="widget-container widget_nav_menu"><!-- widgets list -->
             
-            <h1 class="title-widget">THÔNG TIN LIÊN HỆ</h1>
+            <h1 class="title-widget">Khóa học</h1>
             
             <ul>
-              <li><a  href="#"><i class="fa fa-angle-double-right"></i>Email:</a></li>
-              <li><a  href="#"><i class="fa fa-angle-double-right"></i>Số điện thoại:</a></li>
-              <li><a  href="#"><i class="fa fa-angle-double-right"></i>Facebook:</a></li>
+              <li><a  href="#"><i class="fa fa-angle-double-right"></i>Khóa học lập trình C#</a></li>
+              <li><a  href="#"><i class="fa fa-angle-double-right"></i>Khóa học lập trình Java</a></li>
+              <li><a  href="#"><i class="fa fa-angle-double-right"></i>Khóa học lập trình PHP</a></li>
               
           </ul>
           
@@ -56,15 +56,15 @@
         
        <li class="widget-container widget_nav_menu"><!-- widgets list -->
         
-        <h1 class="title-widget">HỖ TRỢ</h1>
+        <h1 class="title-widget">Đóng góp</h1>
         
         <ul>
 
 
-            <li><a href="#"><i class="fa fa-angle-double-right"></i> Hướng dẫn học online</a></li>
-            <li><a href="#"><i class="fa fa-angle-double-right"></i> Tài liệu</a></li>
+            <li><a href="#"><i class="fa fa-angle-double-right"></i> Quyên góp</a></li>
+            <li><a href="#"><i class="fa fa-angle-double-right"></i> Tình nguyện viên</a></li>
             <li><a href="#"><i class="fa fa-angle-double-right"></i> Học tốt</a></li>
-            <li><a href="#"><i class="fa fa-angle-double-right"></i> Subject Wise Test Series</a></li>
+            <li><a href="#"><i class="fa fa-angle-double-right"></i> Người ủng hộ</a></li>
 
         </ul>
         
@@ -84,13 +84,12 @@
         
        <li class="widget-container widget_recent_news"><!-- widgets list -->
         
-        <h1 class="title-widget">Contact Detail </h1>
+        <h1 class="title-widget">Thông tin liên hệ </h1>
         
         <div class="footerp"> 
-            
-            <h2 class="title-median">Webenlance Pvt. Ltd.</h2>
+          
             <p><b>Email id:</b> <a href="mailto:info@webenlance.com">nguyenhuungoc95@gmail.com</a></p>
-            <p><b>Helpline Numbers </b>
+            <p><b>Facebook:  </b>
 
 
                 
