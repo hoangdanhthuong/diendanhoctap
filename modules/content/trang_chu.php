@@ -5,6 +5,8 @@
 session_start();
 $sql_new = "SELECT a.*, b.ho_ten FROM cau_hoi a, thanh_vien  b WHERE (a.ten_dang_nhap=b.ten_dang_nhap or b.email = a.ten_dang_nhap) and a.tinh_trang = 1 order by a.id desc limit 0,5";
 $result_new = mysqli_query($conn, $sql_new);
+$sql_xep_hang = "SELECT * FROM bang_xep_hang limit 0,5";
+$result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 ?>
 <!-- start contetn -->
 <div class="container">
@@ -60,29 +62,14 @@ $result_new = mysqli_query($conn, $sql_new);
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td><a href="">Huy</a></td>
-							<td>522</td>
-						</tr>
-
-						<tr>
-							<td><a href="">Huy</a></td>
-							<td>522</td>
-						</tr>
-
-						<tr>
-							<td><a href="">Huy</a></td>
-							<td>522</td>
-						</tr>
-
-						<tr>
-							<td><a href="">Huy</a></td>
-							<td>522</td>
-						</tr>
-						<tr>
-							<td><a href="">Huy</a></td>
-							<td>522</td>
-						</tr>
+						<?php
+							while ($row = mysqli_fetch_assoc($result_xep_hang)) {
+								echo '<tr>
+							<td><a href="index.php?xem=thanhvie&id='.$row['id'].'">'.$row['ho_ten'].'</a></td>
+							<td>'.$row['so_luong_bai'].'</td>
+						</tr>';
+							}
+						?>
 					</tbody>
 				</table>
 			</div>

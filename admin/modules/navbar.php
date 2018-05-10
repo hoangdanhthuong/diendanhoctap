@@ -13,7 +13,14 @@
 			<ul class="nav navbar-nav">
 				<li ><a href="index.php?quanly=loaitin">Loại tin</a></li>
 				<li><a href="index.php?quanly=chude">Chủ đề</a></li>
-				<li><a href="index.php?quanly=hoidap">Hỏi đáp</a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Hỏi đáp<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="index.php?quanly=baidang">Chủ đề</a></li>
+						<li><a href="index.php?quanly=baidang">Bài đăng</a></li>
+						<li><a href="index.php?quanly=binhluan">Bình luận</a></li>
+					</ul>
+				</li>
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Khóa học<span class="caret"></span></a>
 					<ul class="dropdown-menu">

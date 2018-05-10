@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 09, 2018 lúc 05:50 CH
+-- Thời gian đã tạo: Th5 10, 2018 lúc 03:35 SA
 -- Phiên bản máy phục vụ: 10.1.21-MariaDB
 -- Phiên bản PHP: 5.6.30
 
@@ -46,6 +46,18 @@ INSERT INTO `admin` (`id`, `ten_dang_nhap`, `mat_khau`, `email`, `quyen`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc đóng vai cho view `bang_xep_hang`
+-- (See below for the actual view)
+--
+CREATE TABLE `bang_xep_hang` (
+`id` int(11)
+,`ho_ten` varchar(25)
+,`so_luong_bai` bigint(21)
+);
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `cau_hoi`
 --
 
@@ -66,7 +78,8 @@ CREATE TABLE `cau_hoi` (
 INSERT INTO `cau_hoi` (`id`, `tieu_de`, `noi_dung`, `hinh_anh`, `ten_dang_nhap`, `ngay_tao`, `tinh_trang`) VALUES
 (1, 'Lỗi màn hình xanh ', 'man hinh xanh', 'uploads/1000000.png', 'nguyenhuungoc', '2018-05-09', 1),
 (2, 'Học tiếng anh cần những gì', 'Em đang cần học tiếng anh', 'uploads/1000000.jpg', 'nguyenhuungoc', '2018-05-09', 1),
-(3, 'Hôm nay là thứ mấy', 'Chắc chắn là thứ hai', 'uploads/8390228.jpg', 'nguyenhuungoc', '2018-05-09', 1);
+(3, 'Hôm nay là thứ mấy', 'Chắc chắn là thứ hai', 'uploads/8390228.jpg', 'nguyenhuungoc', '2018-05-09', 1),
+(4, 'Lỗi code C++', 'Lỗi như sau Sửa mãi không được.', 'uploads/4134674.png', 'ngoc123', '2018-05-09', 1);
 
 -- --------------------------------------------------------
 
@@ -112,7 +125,8 @@ INSERT INTO `chu_de` (`id`, `ten`, `id_loai_tin`, `thu_tu`, `tinh_trang`) VALUES
 (5, 'Học lập trình PHP ', 3, 2, 1),
 (6, 'Học tiếng anh ', 3, 3, 1),
 (10, 'Toán học', 3, 8, 1),
-(11, '123', 3, 3, 1);
+(11, '123', 3, 3, 1),
+(12, 'Lập trình C#', 4, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -122,14 +136,22 @@ INSERT INTO `chu_de` (`id`, `ten`, `id_loai_tin`, `thu_tu`, `tinh_trang`) VALUES
 
 CREATE TABLE `khoa_hoc` (
   `id` int(11) NOT NULL,
-  `id_loai_tin` int(11) NOT NULL,
+  `id_chu_de` int(11) NOT NULL,
   `ten` varchar(500) NOT NULL,
+  `noi_dung` text NOT NULL,
   `hinh_anh` varchar(255) NOT NULL,
   `thoi_gian_ket_thuc` date NOT NULL,
   `thoi_gian_bat_dau` date NOT NULL,
   `thu_tu` int(11) NOT NULL,
   `tinh_trang` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `khoa_hoc`
+--
+
+INSERT INTO `khoa_hoc` (`id`, `id_chu_de`, `ten`, `noi_dung`, `hinh_anh`, `thoi_gian_ket_thuc`, `thoi_gian_bat_dau`, `thu_tu`, `tinh_trang`) VALUES
+(1, 2, 'Khóa học lập trình C# Express', '', '10000.img', '2018-03-14', '2018-05-31', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -157,6 +179,24 @@ INSERT INTO `loai_tin` (`id`, `ten`, `lien_ket`, `thu_tu`, `tinh_trang`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `tai_lieu`
+--
+
+CREATE TABLE `tai_lieu` (
+  `id` int(11) NOT NULL,
+  `id_chu_de` int(11) NOT NULL,
+  `tieu_de` varchar(255) NOT NULL,
+  `noi_dung` text NOT NULL,
+  `lien_ket` varchar(500) NOT NULL,
+  `hinh_anh` varchar(255) NOT NULL,
+  `ngay_tao` date NOT NULL,
+  `thu_tu` int(11) NOT NULL,
+  `tinh_trang` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `thanh_vien`
 --
 
@@ -175,7 +215,17 @@ CREATE TABLE `thanh_vien` (
 --
 
 INSERT INTO `thanh_vien` (`id`, `ten_dang_nhap`, `mat_khau`, `email`, `ho_ten`, `quyen`, `tinh_trang`) VALUES
-(1, 'nguyenhuungoc', '12345', 'ngoc@gmail.com', 'Nguyễn Hữu Ngọc', 2, 1);
+(1, 'nguyenhuungoc', '12345', 'ngoc@gmail.com', 'Nguyễn Hữu Ngọc', 0, 1),
+(6, 'ngoc123', '12345', 'ngoc123@gmail.com', 'Ngọc', 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc cho view `bang_xep_hang`
+--
+DROP TABLE IF EXISTS `bang_xep_hang`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `bang_xep_hang`  AS  (select `a`.`id` AS `id`,`a`.`ho_ten` AS `ho_ten`,count(`b`.`id`) AS `so_luong_bai` from (`thanh_vien` `a` join `cau_hoi` `b`) where (((`a`.`ten_dang_nhap` = `b`.`ten_dang_nhap`) or (`a`.`email` = `b`.`ten_dang_nhap`)) and (`a`.`tinh_trang` = 1) and (`b`.`tinh_trang` = 1)) group by `a`.`id` order by count(`b`.`id`) desc) ;
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -218,6 +268,12 @@ ALTER TABLE `loai_tin`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Chỉ mục cho bảng `tai_lieu`
+--
+ALTER TABLE `tai_lieu`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `thanh_vien`
 --
 ALTER TABLE `thanh_vien`
@@ -236,7 +292,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT cho bảng `cau_hoi`
 --
 ALTER TABLE `cau_hoi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT cho bảng `chi_tiet_khoa_hoc`
 --
@@ -246,22 +302,27 @@ ALTER TABLE `chi_tiet_khoa_hoc`
 -- AUTO_INCREMENT cho bảng `chu_de`
 --
 ALTER TABLE `chu_de`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT cho bảng `khoa_hoc`
 --
 ALTER TABLE `khoa_hoc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT cho bảng `loai_tin`
 --
 ALTER TABLE `loai_tin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
+-- AUTO_INCREMENT cho bảng `tai_lieu`
+--
+ALTER TABLE `tai_lieu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT cho bảng `thanh_vien`
 --
 ALTER TABLE `thanh_vien`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

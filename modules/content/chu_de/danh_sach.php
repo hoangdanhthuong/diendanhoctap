@@ -1,5 +1,6 @@
 <?php 
-$sql = "SELECT * FROM chu_de WHERE tinh_trang =1 order by thu_tu";
+
+$sql = "SELECT * FROM chu_de WHERE id_loai_tin = ".$_GET['id_loai_tin']." and tinh_trang =1 order by thu_tu";
 $result = mysqli_query($conn, $sql);
 ?>
 <div class="container-fluid well" style="margin-top: 55px ;margin-bottom: 5px">

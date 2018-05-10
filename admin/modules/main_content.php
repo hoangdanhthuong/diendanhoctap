@@ -11,6 +11,8 @@ include("modules/content/quan_ly_loai_tin/main.php");
 include("modules/content/quan_ly_chu_de/main.php");
 }elseif($tam == 'hoidap'){
 include("modules/content/quan_ly_hoi_dap/main.php");
+}elseif($tam == 'khoahoc'){
+include("modules/content/quan_ly_khoa_hoc/main.php");
 }else{
 	include("modules/content/dashboard.php");
 }

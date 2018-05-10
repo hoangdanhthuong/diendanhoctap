@@ -12,17 +12,44 @@ $result = mysqli_query($conn, $sql);
 				</div> -->
 				<ul class="nav navbar-nav">
 					<li><a class="navbar-brand" href="index.php">TuHoc.Com</a></li>
-					<li class="dropdown"><a href="index.php?xem=chude">Khóa học</a>
+					<li class="dropdown"><a href="index.php?xem=chude&id_loai_tin=2">Khóa học</a>
 						<ul class="dropdown-menu">
 							<?php
 								while($row = mysqli_fetch_assoc($result)){
-									echo '<li><a href="index.php?xem=khoahoc&id='.$row['id'].'">'.$row['ten'].'</a></li>';
+									if($row['id_loai_tin']==2){
+									echo '<li><a href="index.php?xem=khoahoc&id='.$row['id'].'">'.$row['ten'].'</a></li>';	
+									}
+									
 								}
 							?>
 						</ul>
 					</li>
-					<li ><a href="index.php?xem=chude">Hỏi đáp</a></li>
-					<li><a href="#">Tài liệu</a></li>
+					<li class="dropdown"><a href="index.php?xem=chude&id_loai_tin=3">Hỏi đáp</a>
+						<ul class="dropdown-menu">
+							<?php
+							$result = mysqli_query($conn, $sql);
+								while($row = mysqli_fetch_assoc($result)){
+									if($row['id_loai_tin']==3){
+									echo '<li><a href="index.php?xem=khoahoc&id='.$row['id'].'">'.$row['ten'].'</a></li>';	
+									}
+									
+								}
+							?>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="index.php?xem=chude&id_loai_tin=4">Tài liệu</a>
+						<ul class="dropdown-menu">
+							<?php
+							$result = mysqli_query($conn, $sql);
+								while($row = mysqli_fetch_assoc($result)){
+									if($row['id_loai_tin']==4){
+									echo '<li><a href="index.php?xem=khoahoc&id='.$row['id'].'">'.$row['ten'].'</a></li>';	
+									}
+									
+								}
+							?>
+						</ul>
+					</li>
 					<li><a href="#">Giới thiệu</a></li>
 					<li><a href="#">Đóng góp</a></li>
 					<li>
