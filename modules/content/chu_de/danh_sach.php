@@ -30,13 +30,13 @@ $result = mysqli_query($conn, $sql);
 				<div class="tieu_de row text-center">
 					<h3 class="bg-primary" id="xep_hang">Khóa học mới nhất</h3>
 				</div>
-				<div class="row well">
+				<div class="row well" >
 					<div class="col-sm-4" >
 						<div class="thumbnail" >
 							<a href="/w3images/lights.jpg">
-								<img src="http://2sao.vietnamnetjsc.vn//2016/07/04/11/03/me-man-bo-suu-tap-hang-loat-hot-girl-xinh-yeu-khong-the-roi-mat-cua-chang-nhiep-anh-gia_1.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+								<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 								<div class="caption">
-									<p>Lorem ipsum...</p>
+									<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
 								</div>
 							</a>
 						</div>
@@ -44,9 +44,9 @@ $result = mysqli_query($conn, $sql);
 					<div class="col-sm-4" >
 						<div class="thumbnail" >
 							<a href="/w3images/lights.jpg">
-								<img src="http://2sao.vietnamnetjsc.vn//2016/07/04/11/03/me-man-bo-suu-tap-hang-loat-hot-girl-xinh-yeu-khong-the-roi-mat-cua-chang-nhiep-anh-gia_1.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+								<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 								<div class="caption">
-									<p>Lorem ipsum...</p>
+									<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
 								</div>
 							</a>
 						</div>
@@ -54,22 +54,22 @@ $result = mysqli_query($conn, $sql);
 					<div class="col-sm-4" >
 						<div class="thumbnail" >
 							<a href="/w3images/lights.jpg">
-								<img src="http://2sao.vietnamnetjsc.vn//2016/07/04/11/03/me-man-bo-suu-tap-hang-loat-hot-girl-xinh-yeu-khong-the-roi-mat-cua-chang-nhiep-anh-gia_1.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+								<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 								<div class="caption">
-									<p>Lorem ipsum...</p>
+									<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
 								</div>
 							</a>
 						</div>
 					</div>
-
 				</div>
-				<div class="row well">
+				<div class="row well" >
+					
 					<div class="col-sm-4" >
 						<div class="thumbnail" >
 							<a href="/w3images/lights.jpg">
-								<img src="http://2sao.vietnamnetjsc.vn//2016/07/04/11/03/me-man-bo-suu-tap-hang-loat-hot-girl-xinh-yeu-khong-the-roi-mat-cua-chang-nhiep-anh-gia_1.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+								<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 								<div class="caption">
-									<p>Lorem ipsum...</p>
+									<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
 								</div>
 							</a>
 						</div>
@@ -77,25 +77,23 @@ $result = mysqli_query($conn, $sql);
 					<div class="col-sm-4" >
 						<div class="thumbnail" >
 							<a href="/w3images/lights.jpg">
-								<img src="http://2sao.vietnamnetjsc.vn//2016/07/04/11/03/me-man-bo-suu-tap-hang-loat-hot-girl-xinh-yeu-khong-the-roi-mat-cua-chang-nhiep-anh-gia_1.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+								<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 								<div class="caption">
-									<p>Lorem ipsum...</p>
+									<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
 								</div>
 							</a>
 						</div>
-						
 					</div>
 					<div class="col-sm-4" >
 						<div class="thumbnail" >
 							<a href="/w3images/lights.jpg">
-								<img src="http://2sao.vietnamnetjsc.vn//2016/07/04/11/03/me-man-bo-suu-tap-hang-loat-hot-girl-xinh-yeu-khong-the-roi-mat-cua-chang-nhiep-anh-gia_1.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+								<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 								<div class="caption">
-									<p>Lorem ipsum...</p>
+									<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
 								</div>
 							</a>
 						</div>
 					</div>
-
 				</div>
 
 			</div>

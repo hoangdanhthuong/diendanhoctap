@@ -83,9 +83,9 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 				<div class="col-sm-3" >
 					<div class="thumbnail" >
 						<a href="/w3images/lights.jpg">
-							<img src="http://2sao.vietnamnetjsc.vn//2016/07/04/11/03/me-man-bo-suu-tap-hang-loat-hot-girl-xinh-yeu-khong-the-roi-mat-cua-chang-nhiep-anh-gia_1.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 							<div class="caption">
-								<p>Lorem ipsum...</p>
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
 							</div>
 						</a>
 					</div>
@@ -93,9 +93,9 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 				<div class="col-sm-3" >
 					<div class="thumbnail" >
 						<a href="/w3images/lights.jpg">
-							<img src="http://2sao.vietnamnetjsc.vn//2016/07/04/11/03/me-man-bo-suu-tap-hang-loat-hot-girl-xinh-yeu-khong-the-roi-mat-cua-chang-nhiep-anh-gia_1.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 							<div class="caption">
-								<p>Lorem ipsum...</p>
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
 							</div>
 						</a>
 					</div>
@@ -103,9 +103,9 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 				<div class="col-sm-3" >
 					<div class="thumbnail" >
 						<a href="/w3images/lights.jpg">
-							<img src="http://2sao.vietnamnetjsc.vn//2016/07/04/11/03/me-man-bo-suu-tap-hang-loat-hot-girl-xinh-yeu-khong-the-roi-mat-cua-chang-nhiep-anh-gia_1.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 							<div class="caption">
-								<p>Lorem ipsum...</p>
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
 							</div>
 						</a>
 					</div>
@@ -113,9 +113,51 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 				<div class="col-sm-3" >
 					<div class="thumbnail" >
 						<a href="/w3images/lights.jpg">
-							<img src="http://2sao.vietnamnetjsc.vn//2016/07/04/11/03/me-man-bo-suu-tap-hang-loat-hot-girl-xinh-yeu-khong-the-roi-mat-cua-chang-nhiep-anh-gia_1.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 							<div class="caption">
-								<p>Lorem ipsum...</p>
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row khoa_hoc" >
+				<div class="col-sm-3" >
+					<div class="thumbnail" >
+						<a href="/w3images/lights.jpg">
+							<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<div class="caption">
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3" >
+					<div class="thumbnail" >
+						<a href="/w3images/lights.jpg">
+							<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<div class="caption">
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3" >
+					<div class="thumbnail" >
+						<a href="/w3images/lights.jpg">
+							<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<div class="caption">
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3" >
+					<div class="thumbnail" >
+						<a href="/w3images/lights.jpg">
+							<img src="image/khoa_hoc.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<div class="caption">
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Python</p>
 							</div>
 						</a>
 					</div>
@@ -139,29 +181,29 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 						</thead>
 						<tbody>
 							<tr>
-								<td>aaaaaa</td>
+								<td>Lập trình C#</td>
 								<td>222</td>
-								<td>wwwwwww</td>
+								<td>Sách mới nhất</td>
 							</tr>
 							<tr>
-								<td>aaaaaa</td>
+								<td>Lập trình C#</td>
 								<td>222</td>
-								<td>wwwwwww</td>
+								<td>Sách mới nhất</td>
 							</tr>
 							<tr>
-								<td>aaaaaa</td>
+								<td>Lập trình C#</td>
 								<td>222</td>
-								<td>wwwwwww</td>
+								<td>Sách mới nhất</td>
 							</tr>
 							<tr>
-								<td>aaaaaa</td>
+								<td>Lập trình C#</td>
 								<td>222</td>
-								<td>wwwwwww</td>
+								<td>Sách mới nhất</td>
 							</tr>
 							<tr>
-								<td>aaaaaa</td>
+								<td>Lập trình C#</td>
 								<td>222</td>
-								<td>wwwwwww</td>
+								<td>Sách mới nhất</td>
 							</tr>
 						</tbody>
 					</table>
