@@ -103,9 +103,9 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 				<div class="col-sm-3" >
 					<div class="thumbnail" >
 						<a href="/w3images/lights.jpg">
-							<img src="image/111.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+							<img src="image/tieng_anh.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 							<div class="caption">
-								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình PHP</p>
+								<p style="font-weight: bold; font-size: 16px">Khóa học tiếng anh giao tiếp</p>
 							</div>
 						</a>
 					</div>
@@ -147,7 +147,7 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 						<a href="/w3images/lights.jpg">
 							<img src="image/115.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 							<div class="caption">
-								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Java</p>
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Java cơ bản</p>
 							</div>
 						</a>
 					</div>
@@ -157,7 +157,7 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 						<a href="/w3images/lights.jpg">
 							<img src="image/116.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 							<div class="caption">
-								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Java</p>
+								<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Java nâng cao</p>
 							</div>
 						</a>
 					</div>
@@ -181,29 +181,29 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 						</thead>
 						<tbody>
 							<tr>
-								<td>Lập trình C#</td>
+								<td><a href>Lập trình C#</a></td>
 								<td>222</td>
-								<td>Sách mới nhất</td>
+								<td><a href>Sách mới nhất</a></td>
 							</tr>
 							<tr>
-								<td>Lập trình C++</td>
+								<td><a href>Lập trình C++</a></td>
 								<td>333</td>
-								<td>Bài mới nhất</td>
+								<td><a href>Bài mới nhất</a></td>
 							</tr>
 							<tr>
-								<td>Lập trình C</td>
+								<td><a href>Lập trình C</a></td>
 								<td>444</td>
-								<td>Video mới nhất</td>
+								<td><a href>Video mới nhất</a></td>
 							</tr>
 							<tr>
-								<td>Lập trình Java</td>
+								<td><a href>Lập trình Java</a></td>
 								<td>555</td>
-								<td>Ngôn ngữ hay nhất</td>
+								<td><a href>Ngôn ngữ hay nhất</a></td>
 							</tr>
 							<tr>
-								<td>Lập trình Php</td>
+								<td><a href>Lập trình Php</a></td>
 								<td>666	</td>
-								<td>Sách mới nhất</td>
+								<td><a href>Sách mới nhất</a></td>
 							</tr>
 						</tbody>
 					</table>
@@ -229,24 +229,28 @@ $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
 					</thead>
 					<tbody>
 						<tr>
-							<td> <a>Vui chơi - Giải trí</a></td>
-							<td> <a>So sánh giữa ba cộng đồng học tập forumvi lớn nhất..</a></td>
+							<td> <a href>Vui chơi - Giải trí</a></td>
+							<td> <a href>So sánh giữa ba cộng đồng học tập forumvi lớn nhất..</a></td>
 						</tr>
 						<tr>
-							<td><a>Thư giãn - Giải trí</a></td>
-							<td> <a>Cùng vui chơi với chúng tôi..</a></td>
+							<td><a href>Thư giãn - Giải trí</a></td>
+							<td> <a href>Cùng vui chơi với chúng tôi..</a></td>
 						</tr>
 						<tr>
-							<td> <a>Nghe nhạc </a></td>
-							<td><a>Nghe nhạc tiếng anh hay..</a></td>
+							<td> <a href>Nghe nhạc </a></td>
+							<td><a href>Nghe nhạc tiếng anh hay..</a></td>
 						</tr>
 						<tr>
-							<td><a>Đọc sách</a></td>
-							<td><a>Đọc sách lập trình hay nhất..</a></td>
+							<td><a href>Đọc sách</a></td>
+							<td><a href>Đọc sách lập trình hay nhất..</a></td>
 						</tr>
 						<tr>
-							<td><a>Đọc truyện</a></td>
-							<td><a>So sánh giữa ba cộng đồng học tập forumvi lớn nhất..</a></td>
+							<td><a href>Đọc truyện</a></td>
+							<td><a href>So sánh giữa ba cộng đồng học tập forumvi lớn nhất..</a></td>
+						</tr>
+						<tr>
+							<td><a href>Đoán hình - Nhận biết</a></td>
+							<td><a href>Sự khác nhau giữa PHP và ASP.NET..</a></td>
 						</tr>
 					</tbody>
 				</table>

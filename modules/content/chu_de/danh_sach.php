@@ -56,20 +56,48 @@ $result = mysqli_query($conn, $sql);
 							<a href="/w3images/lights.jpg">
 								<img src="image/116.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 								<div class="caption">
-									<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Java/p>
+									<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Java</p>
 								</div>
 							</a>
 						</div>
 					</div>
-				</div>
-				<div class="row well" >
-					
 					<div class="col-sm-4" >
 						<div class="thumbnail" >
 							<a href="/w3images/lights.jpg">
 								<img src="image/114.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 								<div class="caption">
 									<p style="font-weight: bold; font-size: 16px">Khóa học lập trình C/C++</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4" >
+						<div class="thumbnail" >
+							<a href="/w3images/lights.jpg">
+								<img src="image/tieng_anh.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+								<div class="caption">
+									<p style="font-weight: bold; font-size: 16px">Khóa học tiếng anh giao tiếp</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4" >
+						<div class="thumbnail" >
+							<a href="/w3images/lights.jpg">
+								<img src="image/famework.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+								<div class="caption">
+									<p style="font-weight: bold; font-size: 16px">Khóa học lập trình php framework</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					
+					<div class="col-sm-4" >
+						<div class="thumbnail" >
+							<a href="/w3images/lights.jpg">
+								<img src="image/mvc5.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+								<div class="caption">
+									<p style="font-weight: bold; font-size: 16px">Khóa học lập trình asp.net mvc 5</p>
 								</div>
 							</a>
 						</div>
@@ -87,9 +115,46 @@ $result = mysqli_query($conn, $sql);
 					<div class="col-sm-4" >
 						<div class="thumbnail" >
 							<a href="/w3images/lights.jpg">
-								<img src="image/lap_trinh_c.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+								<img src="image/tieng_anh_1.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 								<div class="caption">
-									<p style="font-weight: bold; font-size: 16px">Khóa học lập trình C#</p>
+									<p style="font-weight: bold; font-size: 16px">Khóa học tiếng anh cơ bản</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="course-row-hearder; ">
+						<h3 >
+							Nổi bật trong
+							<span> Lập trình PHP </span>
+						</h3>
+						
+					</div>
+					<div class="col-sm-4" >
+						<div class="thumbnail" >
+							<a href="/w3images/lights.jpg">
+								<img src="image/php1.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+								<div class="caption">
+									<p style="font-weight: bold; font-size: 16px">Khóa học lập trình PHP</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4" >
+						<div class="thumbnail" >
+							<a href="/w3images/lights.jpg">
+								<img src="image/php2.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+								<div class="caption">
+									<p style="font-weight: bold; font-size: 16px">Khóa học lập trình backend PHP</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4" >
+						<div class="thumbnail" >
+							<a href="/w3images/lights.jpg">
+								<img src="image/php3.png" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
+								<div class="caption">
+									<p style="font-weight: bold; font-size: 16px">Laravel Best PHP Framework</p>
 								</div>
 							</a>
 						</div>

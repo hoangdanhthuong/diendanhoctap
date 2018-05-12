@@ -118,3 +118,12 @@ footer {
     background-color: #555;
     color: white;
 }
+.course-row-header h3>span {
+    font-style: italic;
+    font-weight: 400;
+    }
+.course-row-header h3 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: 300;
+}
