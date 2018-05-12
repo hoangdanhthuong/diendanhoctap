@@ -136,7 +136,7 @@
 
 				<div class="design">
 
-                  <a href="#">Franchisee </a> |  <a target="_blank" href="http://www.webenlance.com">Tiếng Việt Quy định và Nội quy  Liên hệ  Trợ giúp  Trang chủ
+                  <a href="#">Điều khoản </a> |  <a target="_blank" href="http://www.webenlance.com">Tiếng Việt Quy định và Nội quy  Liên hệ  Trợ giúp  Trang chủ
                   </a>
 
               </div>

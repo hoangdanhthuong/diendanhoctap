@@ -1,6 +1,8 @@
-<div class="container-fluid bg-info" style="height: 1000px;">
+<div class="container-fluid bg-info" style="height: 1000px;color: red">
 	<div style="vertical-align: middle;">
-		<h3 >Chào mừng bạn đến với trang quản trị</h3>
+		
+			<marquee><h2 >Chào mừng bạn đến với trang quản trị</h2></marquee>
+		
 	</div>
 	
 </div>
