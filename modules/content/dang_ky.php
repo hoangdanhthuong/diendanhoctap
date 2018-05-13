@@ -41,7 +41,7 @@
 				</form>
 			</div>
 			<div class="modal-footer">
-				<p>Đã có tài khoản? <a href="index.php?xem=dangnhap">Đăng nhập/a></p>
+				<p>Đã có tài khoản? <a href="index.php?xem=dangnhap">Đăng nhập</a></p>
 			</div>
 
 		</div>
