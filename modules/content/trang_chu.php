@@ -7,6 +7,7 @@ $sql_new = "SELECT a.*, b.ho_ten FROM cau_hoi a, thanh_vien  b WHERE (a.ten_dang
 $result_new = mysqli_query($conn, $sql_new);
 $sql_xep_hang = "SELECT * FROM bang_xep_hang limit 0,5";
 $result_xep_hang = mysqli_query($conn, $sql_xep_hang);
+$sql_get_chu_de = ""
 ?>
 <!-- start contetn -->
 <div class="container">

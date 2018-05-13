@@ -16,7 +16,6 @@
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Hỏi đáp<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="index.php?quanly=baidang">Chủ đề</a></li>
 						<li><a href="index.php?quanly=baidang">Bài đăng</a></li>
 						<li><a href="index.php?quanly=binhluan">Bình luận</a></li>
 					</ul>
@@ -28,6 +27,7 @@
 						<li><a href="index.php?quanly=baihoc">Bài học</a></li>
 					</ul>
 				</li>
+				<li><a href="index.php?quanly=tailieu">Tài liệu</a></li>
 				<li><a href="index.php?quanly=baiviet">Bài viết</a></li>
 				<li><a href="index.php?quanly=thugian">Thư giãn</a></li>
 				<li><a href="index.php?quanly=thongke">Thống kê</a></li>

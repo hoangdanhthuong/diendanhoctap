@@ -1,6 +1,6 @@
 <!-- Modal login -->
 
-<div class="modal fade" id="dangnhap" role="dialog">
+<div class="modal fade" id="login" role="dialog">
 	<div class="modal-dialog">
 		<!-- Modal content -->
 		<div class="modal-content">
