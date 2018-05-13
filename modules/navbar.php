@@ -63,7 +63,7 @@ $result = mysqli_query($conn, $sql);
 					if(!isset($_SESSION['dang_nhap_dien_dan'])){
 						?>
 						<li class="dangky"><a href="#" data-toggle = "modal" data-target = "#signup"><span class="glyphicon glyphicon-user"  ></span> Đăng ký</a></li>
-						<li class="dangky"><a href="index.php?xem=dangnhap" ><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+						<li class="dangky"><a href="#" data-toggle = "modal" data-target = "#login"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
 						<?php
 					}else{
 						?>

@@ -1,9 +1,5 @@
 $(document).ready(function(){
-	$("#table_khoa_hoc").DataTable();
-});
-
-$(document).on('click','#them', function(){
-	alert(tinyMCE.activeEditor.getContent());
+	$('#table_bai_hoc').DataTable();
 });
 function readURL(input) {
 	if (input.files && input.files[0]) {

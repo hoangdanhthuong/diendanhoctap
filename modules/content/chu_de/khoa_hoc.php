@@ -29,7 +29,7 @@
 					<a href="/w3images/lights.jpg">
 						<img src="image/116.jpg" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
 						<div class="caption">
-							<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Java/p>
+							<p style="font-weight: bold; font-size: 16px">Khóa học lập trình Java</p>
 							</div>
 						</a>
 					</div>
