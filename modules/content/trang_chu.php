@@ -16,7 +16,7 @@ $result_tai_lieu = mysqli_query($conn, $sql_tai_lieu);
 <!-- start contetn -->
 <div class="container">
 	<div class="row">
-		<div class="img_banner">
+		<div class="img_banner" style="padding-top: 20px">
 			<img src="image/header.jpg" alt="">
 		</div>
 	</div>
@@ -86,19 +86,26 @@ $result_tai_lieu = mysqli_query($conn, $sql_tai_lieu);
 			<h3 class="bg-primary" style="padding: 10px">Khóa học mới nhất</h3>	
 			<div class="row khoa_hoc" >
 				<?php 
-				$target = "admin/modules/content/quan_ly_khoa_hoc/uploads/";
-				while ($row = mysqli_fetch_assoc($result_khoa_hoc)) {
-					echo 
-					'<div class="col-sm-3" >
-					<div class="thumbnail" >
-					<a href="">
-					<img src="'.$target.$row['hinh_anh'].'" alt="Lights"  class="img-responsive" style="min-height: 200px;height: 180px;width: 100%;">
-					<div class="caption">
-					<p style="font-weight: bold; font-size: 16px">'.$row['ten'].'</p>
-					</div>
-					</a>
-					</div>
-					</div>';
+				$num_row = mysqli_num_rows($result_khoa_hoc);
+				if($num_row == 0){
+					echo "Không có khóa học nào ..";
+				}else{
+					$target = "admin/modules/content/quan_ly_khoa_hoc/uploads/";
+					while ($row = mysqli_fetch_assoc($result_khoa_hoc)) {
+						?>
+						<div class="col-sm-4" style="position: relative;height: 300px;">
+							<div class="thumbnail" >
+								<a href="index.php?xem=chitietkhoahoc&id=<?php echo $row['id']?>">
+									<img src="<?php echo $target.$row['hinh_anh']?>" alt="Lights"  class="img-responsive" style=" position: relative; min-height: 200px;height: 180px;width: 100%;">
+									<div class="caption">
+										<p style="font-weight: bold; font-size: 16px; height: 35px"><?php echo $row['ten']?></p>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<?php
+					}
 				}
 				?>
 				
@@ -123,13 +130,13 @@ $result_tai_lieu = mysqli_query($conn, $sql_tai_lieu);
 						</thead>
 						<tbody>
 							<?php 
-								while ($row = mysqli_fetch_assoc($result_tai_lieu)) {
-									echo '<tr>
-								<td><a href>'.$row['ten'].'</a></td>
+							while ($row = mysqli_fetch_assoc($result_tai_lieu)) {
+								echo '<tr>
+								<td><a href = "index.php?xem=tailieu&id='.$row['id'].'">'.$row['ten'].'</a></td>
 								<td>222</td>
 								<td><a href>Sách mới nhất</a></td>
-							</tr>';
-								}
+								</tr>';
+							}
 							?>
 							
 						</tbody>

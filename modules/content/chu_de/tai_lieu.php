@@ -1,3 +1,9 @@
+<?php 
+	if(isset($_GET['id'])){
+		
+	}
+?>
+
 <div class="col-sm-8">
 	<div class="container-fluid row ">
 		<div class="tieu_de row text-center">

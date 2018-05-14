@@ -10,6 +10,12 @@ if($tam == "dangky"){
 	include("modules/content/nguoi_dung/dang_nhap.php");
 }elseif($tam =="chude"){
 	include("modules/content/chu_de/danh_sach.php");
+}elseif($tam =="chitietkhoahoc"){
+	include("modules/content/chu_de/chi_tiet_khoa_hoc.php");
+}elseif($tam =="bai_hoc"){
+	include("modules/content/bai_hoc/danh_sach.php");
+}elseif($tam =="baiviet"){
+	include("modules/content/bai_viet/chi_tiet_bai_viet.php");
 }elseif($tam =="gioithieu"){
 	include("modules/content/gioi_thieu.php");
 }else{
@@ -33,4 +39,8 @@ if(!isset($_SESSION['dang_nhap_dien_dan'])){
 	
 }
 include('modules/content/search.php');
+
+function get_Base_URL(){
+	return "http://" . $_SERVER['SERVER_NAME'].':8888' . $_SERVER['REQUEST_URI'];
+}
 ?>

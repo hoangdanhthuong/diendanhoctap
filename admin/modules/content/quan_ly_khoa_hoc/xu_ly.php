@@ -1,5 +1,6 @@
 <?php
 include_once('../../config.php');
+
 $tieu_de = trim($_POST['tieu_de']);
 //file image
 
@@ -60,10 +61,17 @@ if(isset($_POST['them'])){
 	}
 }else{
 	$id = $_GET['id'];
-	$sql = "DELETE FROM khuyen_mai WHERE id =".$id;
-	if(mysqli_query($conn, $sql)){
-		header("location: ../../../index.php?quanly=khoahoc");
+	if(check_delete($conn, $id)){
+		$sql = "DELETE FROM khoa_hoc WHERE id =".$id;
+		if(mysqli_query($conn, $sql)){
+			header("location: ../../../index.php?quanly=khoahoc");
+		}	else{
+			header("location: ../../../index.php?quanly=khoahoc&error=3");
+		}
+	}else{
+		header("location: ../../../index.php?quanly=khoahoc&error=4");
 	}
+	
 }
 function check_input($conn, $sql, $id = -1){
 	$result = mysqli_query($conn, $sql);
@@ -79,6 +87,7 @@ function check_input($conn, $sql, $id = -1){
 	}
 }
 function check_delete($conn, $id){
-	
+	$sql =  "SELECT * FROM bai_hoc WHERE id_khoa_hoc = ".$id;
+	return mysqli_num_rows(mysqli_query($conn, $sql)) == 0;
 }
 ?>
