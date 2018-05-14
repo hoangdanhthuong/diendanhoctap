@@ -1,8 +1,15 @@
 <?php
 include("modules/config.php");
-$sql = "SELECT a.*, b.ten as ten_chu_de FROM khoa_hoc a, chu_de b WHERE  b.id =2";
+$sql = "SELECT a.*, b.ten as ten_chu_de FROM khoa_hoc a, chu_de b WHERE  b.id = id_chu_de";
 $result = mysqli_query($conn,$sql);
+if(isset($_GET['error'])){
+	echo '<script type="text/javascript">
+	alert("Xóa không thành công! Khóa học này đang tồn tại bài học. Vui lòng xóa bài học.");
+	</script>';
+}
+
 ?>
+
 <div class="container-fluid bg-success ">
 	<div class="row bg-primary">
 		<h2 class="text-center" >Danh sách khóa học</h2>
@@ -42,7 +49,7 @@ $result = mysqli_query($conn,$sql);
 							<td><?php echo $row['thu_tu']?></td>
 							<td><?php echo $row['tinh_trang']?></td>
 							<td><a href="index.php?quanly=khoahoc&ac=sua&id=<?php echo $row['id']?>" class="btn_them" ><i class="glyphicon glyphicon-edit"></i></a></td>
-							<td><a href="modules/content/quan_ly_khoa_hoc/xu_ly.php?id=<?php echo $row['id']?>" class="btn_xoa" style = "pointer-events: none;"><i class="glyphicon glyphicon-trash"></i></a></td>
+							<td><a href="modules/content/quan_ly_khoa_hoc/xu_ly.php?id=<?php echo $row['id']?>" class="btn_xoa" ><i class="glyphicon glyphicon-trash"></i></a></td>
 						</tr>
 						<?php
 					}

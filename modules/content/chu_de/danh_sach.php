@@ -16,7 +16,7 @@ $result = mysqli_query($conn, $sql);
 						while($row = mysqli_fetch_assoc($result)){
 							echo '
 							<tr>
-							<td><a href="">'.$row['ten'].'</a></td>
+							<td><a href="index.php?xem=chude&id_loai_tin=2&id='.$row['id'].'">'.$row['ten'].'</a></td>
 							</tr>';
 						}
 						?>

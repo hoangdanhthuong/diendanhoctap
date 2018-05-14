@@ -12,7 +12,7 @@ $sql_get_chu_de = ""
 <!-- start contetn -->
 <div class="container">
 	<div class="row">
-		<div class="img_banner">
+		<div class="img_banner" style="padding-top: 20px">
 			<img src="image/header.jpg" alt="">
 		</div>
 	</div>
@@ -163,6 +163,30 @@ $sql_get_chu_de = ""
 						</a>
 					</div>
 				</div>
+				<?php 
+				$num_row = mysqli_num_rows($result_khoa_hoc);
+				if($num_row == 0){
+					echo "Không có khóa học nào ..";
+				}else{
+					$target = "admin/modules/content/quan_ly_khoa_hoc/uploads/";
+					while ($row = mysqli_fetch_assoc($result_khoa_hoc)) {
+						?>
+						<div class="col-sm-4" style="position: relative;height: 300px;">
+							<div class="thumbnail" >
+								<a href="index.php?xem=chitietkhoahoc&id=<?php echo $row['id']?>">
+									<img src="<?php echo $target.$row['hinh_anh']?>" alt="Lights"  class="img-responsive" style=" position: relative; min-height: 200px;height: 180px;width: 100%;">
+									<div class="caption">
+										<p style="font-weight: bold; font-size: 16px; height: 35px"><?php echo $row['ten']?></p>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<?php
+					}
+				}
+				?>
+				
 			</div>
 		</div>
 	</div>
@@ -181,6 +205,7 @@ $sql_get_chu_de = ""
 							</tr>
 						</thead>
 						<tbody>
+
 							<tr>
 								<td><a href>Lập trình C#</a></td>
 								<td>222</td>
@@ -206,6 +231,17 @@ $sql_get_chu_de = ""
 								<td>666	</td>
 								<td><a href>Sách mới nhất</a></td>
 							</tr>
+
+							<?php 
+							while ($row = mysqli_fetch_assoc($result_tai_lieu)) {
+								echo '<tr>
+								<td><a href = "index.php?xem=tailieu&id='.$row['id'].'">'.$row['ten'].'</a></td>
+								<td>222</td>
+								<td><a href>Sách mới nhất</a></td>
+								</tr>';
+							}
+							?>
+							
 						</tbody>
 					</table>
 				</div>

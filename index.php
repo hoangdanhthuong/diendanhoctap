@@ -16,6 +16,7 @@
 		include('modules/navbar.php');
 		include('modules/main.php');
 		include('modules/footer_main.php');
+		
 	?>
 	<script src="jquery/jquery.min.js"></script>
 	<script src="jquery/myscript.js"></script>

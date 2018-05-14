@@ -26,7 +26,7 @@ if(isset($_POST['them'])){
 
 	if(check_input($conn, $sql_check, $id)){
 		$file_image = save_files('hinh_anh');
-		if( != ''){
+		if( $file_image != ''){
 			$sql = "UPDATE bai_hoc SET ten='".$tieu_de."',noi_dung='".$noi_dung."',hinh_anh='".$file_image."',link_video='".$link_video."',ngay_tao='".date('Y-m-d')."',thu_tu='".$thu_tu."',tinh_trang='".$tinh_trang."',id_khoa_hoc='".$id_khoa_hoc."' WHERE id=".$id;
 		}else{
 			$sql = "UPDATE bai_hoc SET ten='".$tieu_de."',noi_dung='".$noi_dung."', link_video='".$link_video."',ngay_tao='".date('Y-m-d')."',thu_tu='".$thu_tu."',tinh_trang='".$tinh_trang."',id_khoa_hoc='".$id_khoa_hoc."' WHERE id=".$id;
@@ -60,9 +60,6 @@ function check_input($conn, $sql, $id = -1){
 			return false;
 		}
 	}
-}
-function check_delete($conn, $id){
-	
 }
 function save_file($input,$i=-1){
 	//file image

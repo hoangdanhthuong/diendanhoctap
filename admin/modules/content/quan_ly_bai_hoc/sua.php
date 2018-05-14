@@ -12,6 +12,8 @@ if(isset($_GET['error'])){
 	</script>';
 }
 $target = "modules/content/quan_ly_bai_hoc/uploads/";
+$image = explode(':', $row_bai_hoc['hinh_anh']);
+
 ?>
 <div class="container-fluid bg-success ">
 	<div class="row bg-primary">
@@ -46,8 +48,7 @@ $target = "modules/content/quan_ly_bai_hoc/uploads/";
 						<input type="file" id = "hinh_anh" name="hinh_anh[]" accept="image/*" required multiple >
 					</div>
 					<div class="row">
-						<img src="<?php $image = explode(':', $row['hinh_anh']
-						); echo $target.['0'];?>" id="view_hinh_anh" alt="Red dot" width="100px" height="100px" class="col-sm-offset-2" >
+						<img src="<?php echo $target.$image[0];?>" id="view_hinh_anh" alt="Red dot" width="100px" height="100px" class="col-sm-offset-2" >
 					</div>
 				</div>
 				<div class="form-group"> 
