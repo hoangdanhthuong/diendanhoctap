@@ -18,6 +18,8 @@ if($tam == "dangky"){
 	include("modules/content/bai_viet/chi_tiet_bai_viet.php");
 }elseif($tam =="gioithieu"){
 	include("modules/content/gioi_thieu.php");
+}elseif($tam =="thugian"){
+	include("modules/content/thu_gian/main.php");
 }else{
 	include("modules/content/trang_chu.php");	
 }

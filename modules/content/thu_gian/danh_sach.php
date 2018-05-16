@@ -1,3 +1,4 @@
+
 <?php 
 if(isset($_GET['id'])){
 
@@ -9,18 +10,20 @@ $sql = "SELECT a.*, b.ho_ten FROM cau_hoi a, thanh_vien b WHERE a.ten_dang_nhap 
 $result  = mysqli_query($conn, $sql);
 $num_row = mysqli_num_rows($result);
 ?>
-
-<div class="col-sm-8">
+<hr>
+<div class="container" style="margin-bottom: 20px">
 	<div class="container-fluid row ">
 		<div class="tieu_de row text-center">
-			<h3 class="bg-primary" id="xep_hang">Tất cả câu hỏi </h3>
+			<h3 class="bg-primary" id="xep_hang">Tất cả chủ đề</h3>
 		</div>
+		<hr>
 		<?php 
 		if($num_row == 0){
-			echo "Chưa có câu hỏi nào";
+			echo "<p>Chưa có câu hỏi nào<p></hr>";
 		}else{
 			while ($row = mysqli_fetch_assoc($result)) {
-
+				$sql_new =  "SELECT *, MAX(thoi_gian) FROM binh_luan WHERE id_cau_hoi = ".$row['id'];
+				$row_new = mysqli_fetch_assoc(mysqli_query($conn,$sql_new));
 				?>
 				<div class="row well" >
 					<div class="col-sm-1 ">
@@ -38,7 +41,7 @@ $num_row = mysqli_num_rows($result);
 						</div>
 						<div class="col-sm-3 list-group-item  list-group-item-warning">
 							<p style="font-weight: bold;color: black;">Bình luận mới nhất</p>
-							<a>admin</a>
+							<a  href="index.php?xem=baiviet&id=<?php echo $row['id']?>"><?php echo $row_new['noi_dung']?></a>
 						</div>
 					</div>
 				</div>
@@ -62,3 +65,5 @@ $num_row = mysqli_num_rows($result);
 	}
 	?>
 </div>		
+<hr/>
+<hr/>
