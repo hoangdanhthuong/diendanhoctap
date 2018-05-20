@@ -28,9 +28,6 @@
 					</ul>
 				</li>
 				<li><a href="index.php?quanly=tailieu">Tài liệu</a></li>
-				<li><a href="index.php?quanly=baiviet">Bài viết</a></li>
-				<li><a href="index.php?quanly=thugian">Thư giãn</a></li>
-				<li><a href="index.php?quanly=thongke">Thống kê</a></li>
 				<li><a href="index.php?quanly=thanhvien">Thành viên</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">

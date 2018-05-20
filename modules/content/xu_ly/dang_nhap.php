@@ -3,7 +3,7 @@ include("../../../admin/modules/config.php");
 if(isset($_POST['dang_nhap'])){
 	$ten_dang_nhap = $_POST['userName'];
 	$mat_khau = $_POST['password'];
-	$sql = "SELECT * FROM thanh_vien WHERE (ten_dang_nhap= '".$ten_dang_nhap."' or email = '".$ten_dang_nhap."') and mat_khau = '".$mat_khau."'";
+	$sql = "SELECT * FROM thanh_vien WHERE (ten_dang_nhap= '".$ten_dang_nhap."' or email = '".$ten_dang_nhap."') and mat_khau = '".$mat_khau."' AND tinh_trang = 1";
 	$result = mysqli_query($conn, $sql);
 	if(mysqli_num_rows($result)>0){
 		$row = mysqli_fetch_assoc($result);

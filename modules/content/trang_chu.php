@@ -12,6 +12,8 @@ $result_khoa_hoc = mysqli_query($conn, $sql_khoa_hoc);
 $sql_tai_lieu = "SELECT * FROM chu_de WHERE id_loai_tin = 4 and tinh_trang = 1 order by thu_tu ";
 $result_tai_lieu = mysqli_query($conn, $sql_tai_lieu);
 
+$sql_thu_gian = "SELECT * FROM chu_de WHERE id_loai_tin = 5 and tinh_trang = 1 order by thu_tu ";
+$result_thu_gian = mysqli_query($conn, $sql_thu_gian);
 ?>
 <!-- start contetn -->
 <div class="container">
@@ -93,7 +95,7 @@ $result_tai_lieu = mysqli_query($conn, $sql_tai_lieu);
 					$target = "admin/modules/content/quan_ly_khoa_hoc/uploads/";
 					while ($row = mysqli_fetch_assoc($result_khoa_hoc)) {
 						?>
-						<div class="col-sm-4" style="position: relative;height: 300px;">
+						<div class="col-sm-3" style="position: relative;height: 300px;">
 							<div class="thumbnail" >
 								<a href="index.php?xem=chitietkhoahoc&id=<?php echo $row['id']?>">
 									<img src="<?php echo $target.$row['hinh_anh']?>" alt="Lights"  class="img-responsive" style=" position: relative; min-height: 200px;height: 180px;width: 100%;">
@@ -120,7 +122,7 @@ $result_tai_lieu = mysqli_query($conn, $sql_tai_lieu);
 			<h3 class="bg-primary" style="padding: 10px">Tài liệu</h3>	
 			<div class="row khoa_hoc" >
 				<div class="container-fluid">
-					<table class="table table-hover bg-info">
+					<table class="table table-hover bg-info table-striped">
 						<thead class="bg-success">
 							<tr>
 								<th class="col-sm-6">Chủ đề</th>
@@ -131,10 +133,12 @@ $result_tai_lieu = mysqli_query($conn, $sql_tai_lieu);
 						<tbody>
 							<?php 
 							while ($row = mysqli_fetch_assoc($result_tai_lieu)) {
+								$sql_new_tai_lieu = "SELECT * FROM tai_lieu WHERE id_chu_de= ".$row['id']." order by ngay_tao desc";
+								$row_new_tai_lieu = mysqli_fetch_assoc(mysqli_query($conn, $sql_new_tai_lieu));
 								echo '<tr>
-								<td><a href = "index.php?xem=tailieu&id='.$row['id'].'">'.$row['ten'].'</a></td>
-								<td>222</td>
-								<td><a href>Sách mới nhất</a></td>
+								<td class = "text-uppercase"><a href = "index.php?xem=tailieu&id='.$row['id'].'">'.$row['ten'].'</a></td>
+								<td>'.mysqli_num_rows(mysqli_query($conn, $sql_new_tai_lieu)).'</td>
+								<td><a href = "index.php?xem=tailieu&id='.$row['id'].'">'.$row_new_tai_lieu['tieu_de'].'</a></td>
 								</tr>';
 							}
 							?>
@@ -150,10 +154,10 @@ $result_tai_lieu = mysqli_query($conn, $sql_tai_lieu);
 	<!-- giai tri -->
 	<div class="row " id="dang_bai" >
 		<div class="container-fluid" id="tieu_de">
-			<h3 class="bg-primary" style="padding: 10px">Thư giản - giải trí</h3>	
+			<h3 class="bg-primary" style="padding: 20px">Thư giãn - giải trí</h3>	
 		</div>
-		<div class="row">
-			<div class="container-fluid" id="tieu_de">
+		<div class="row" style="margin-bottom: 10px">
+			<div class="container" id="tieu_de">
 				<table class="table table-striped">
 					<thead>
 						<tr>
@@ -162,30 +166,20 @@ $result_tai_lieu = mysqli_query($conn, $sql_tai_lieu);
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td> <a href>Vui chơi - Giải trí</a></td>
-							<td> <a href>So sánh giữa ba cộng đồng học tập forumvi lớn nhất..</a></td>
-						</tr>
-						<tr>
-							<td><a href>Thư giãn - Giải trí</a></td>
-							<td> <a href>Cùng vui chơi với chúng tôi..</a></td>
-						</tr>
-						<tr>
-							<td> <a href>Nghe nhạc </a></td>
-							<td><a href>Nghe nhạc tiếng anh hay..</a></td>
-						</tr>
-						<tr>
-							<td><a href>Đọc sách</a></td>
-							<td><a href>Đọc sách lập trình hay nhất..</a></td>
-						</tr>
-						<tr>
-							<td><a href>Đọc truyện</a></td>
-							<td><a href>So sánh giữa ba cộng đồng học tập forumvi lớn nhất..</a></td>
-						</tr>
-						<tr>
-							<td><a href>Đoán hình - Nhận biết</a></td>
-							<td><a href>Sự khác nhau giữa PHP và ASP.NET..</a></td>
-						</tr>
+						<?php 
+
+						while ($row_thu_gian = mysqli_fetch_assoc($result_thu_gian)) {
+							$sql_new_thu_gian = "SELECT *, MAX(ngay_tao) FROM cau_hoi WHERE id_chu_de=".$row_thu_gian['id'];
+							$row = mysqli_fetch_assoc(mysqli_query($conn, $sql_new_thu_gian));
+							$row_binh_luan = ""
+							?>
+							<tr>
+								<td > <a href="index.php?xem=thugian&id=<?php echo $row_thu_gian['id']?>" class ="text-uppercase"><?php echo $row_thu_gian['ten']?></a></td>
+								<td> <a href="index.php?xem=baiviet&id=<?php echo $row['id']?>"><?php echo $row['tieu_de']?></a></td>
+							</tr>
+							<?php
+						}
+						?>
 					</tbody>
 				</table>
 			</div>

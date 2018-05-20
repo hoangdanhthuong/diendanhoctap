@@ -21,9 +21,9 @@ if($name_file!=''){
 }
 
 if($hinh_anh != ''){
-	$sql = "INSERT INTO cau_hoi(tieu_de, noi_dung, hinh_anh, ten_dang_nhap, ngay_tao, tinh_trang) VALUES ('".$tieu_de."','".$noi_dung."','".$hinh_anh."','".$_SESSION['dang_nhap_dien_dan']."','".date('Y-m-d')."',1)";
+	$sql = "INSERT INTO cau_hoi(tieu_de, id_chu_de, noi_dung, hinh_anh, ten_dang_nhap, ngay_tao, tinh_trang) VALUES ('".$tieu_de."','".$chu_de."','".$noi_dung."','".$hinh_anh."','".$_SESSION['dang_nhap_dien_dan']."','".date('Y-m-d')."',1)";
 }else{
-	$sql = "INSERT INTO cau_hoi(tieu_de, noi_dung, ten_dang_nhap, ngay_tao, tinh_trang) VALUES ('".$tieu_de."','".$noi_dung."','".$_SESSION['dang_nhap_dien_dan']."','".date('Y-m-d')."',1)";
+	$sql = "INSERT INTO cau_hoi(tieu_de, id_chu_de, noi_dung, ten_dang_nhap, ngay_tao, tinh_trang) VALUES ('".$tieu_de."','".$chu_de ."','".$noi_dung."','".$_SESSION['dang_nhap_dien_dan']."','".date('Y-m-d')."',1)";
 }
 if(mysqli_query($conn,$sql)){
 	header("location: ../../../index.php?xem=bai_viet&id_chu_de=".$chu_de);

@@ -69,13 +69,14 @@ if (isset($_POST['gui'])) {
 						}else{
 							while($row_binh_luan = mysqli_fetch_assoc($result_binh_luan)){
 							?>
-							<div class="well row" style="margin:10px 20px">
+							<hr>
+							<div class=" row" style="margin:10px 20px">
 
 								<div class="col-md-2 bg-info" style="margin: -20; padding: 5px">
 									<span><b><?php echo $row_binh_luan['ho_ten']?></b></span><br>
 									<span><b><?php echo $row_binh_luan['thoi_gian']?></b></span>
 								</div>
-								<div class="col-md-8">
+								<div class="col-md-8 bg-default" >
 									<p>
 										<?php echo $row_binh_luan['noi_dung']?>
 									</p>
