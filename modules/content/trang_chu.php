@@ -95,7 +95,7 @@ $result_thu_gian = mysqli_query($conn, $sql_thu_gian);
 					$target = "admin/modules/content/quan_ly_khoa_hoc/uploads/";
 					while ($row = mysqli_fetch_assoc($result_khoa_hoc)) {
 						?>
-						<div class="col-sm-4" style="position: relative;height: 300px;">
+						<div class="col-sm-3" style="position: relative;height: 300px;">
 							<div class="thumbnail" >
 								<a href="index.php?xem=chitietkhoahoc&id=<?php echo $row['id']?>">
 									<img src="<?php echo $target.$row['hinh_anh']?>" alt="Lights"  class="img-responsive" style=" position: relative; min-height: 200px;height: 180px;width: 100%;">
@@ -171,10 +171,11 @@ $result_thu_gian = mysqli_query($conn, $sql_thu_gian);
 						while ($row_thu_gian = mysqli_fetch_assoc($result_thu_gian)) {
 							$sql_new_thu_gian = "SELECT *, MAX(ngay_tao) FROM cau_hoi WHERE id_chu_de=".$row_thu_gian['id'];
 							$row = mysqli_fetch_assoc(mysqli_query($conn, $sql_new_thu_gian));
+							$row_binh_luan = ""
 							?>
 							<tr>
 								<td > <a href="index.php?xem=thugian&id=<?php echo $row_thu_gian['id']?>" class ="text-uppercase"><?php echo $row_thu_gian['ten']?></a></td>
-								<td> <a href="index.php?xem=baiviet&id=<?php echo $row_thu_gian['id']?>"><?php echo $row['tieu_de']?></a></td>
+								<td> <a href="index.php?xem=baiviet&id=<?php echo $row['id']?>"><?php echo $row['tieu_de']?></a></td>
 							</tr>
 							<?php
 						}

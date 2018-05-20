@@ -21,6 +21,8 @@ include("modules/content/quan_ly_khoa_hoc/main.php");
 include("modules/content/quan_ly_binh_luan/main.php");
 }elseif($tam == 'baihoc'){
 include("modules/content/quan_ly_bai_hoc/main.php");
+}elseif($tam == 'thanhvien'){
+include("modules/content/quan_ly_thanh_vien/main.php");
 }else{
 	include("modules/content/dashboard.php");
 }

@@ -35,15 +35,15 @@ $result = mysqli_query($conn,$sql);
 							<td class="text-left"><?php echo $row['tieu_de']?></td>
 							<td class="text-left"><?php echo $row['ten']?></td>
 							<td><?php echo $row['ngay_tao']?></td>
-							<td><?php 
+							<td id="<?php echo $row['tinh_trang'];?>"><?php 
 								if($row['tinh_trang'] ==1){
 									echo "Kích hoạt";
 								}else{
 									echo "Không kích hoạt";
 								}
 							?></td>
-							<td><a href="" class="btn_tinh_trang_<?php echo $row['id']?>" ><i class="glyphicon glyphicon-check"></i></td>
-							<td><a href="modules/content/quan_ly_bai_dang/xu_ly.php?id=<?php echo $row['id']?>" class="btn_xoa" ><i class="glyphicon glyphicon-trash"></i></a></td>
+							<td><a href="javascript:void(0)" class="tinh_trang" id="<?php echo $row['id']?>" ><i class="glyphicon glyphicon-check"></i></td>
+							<td><a href="javascript:void(0)" class="btn_xoa" ><i class="glyphicon glyphicon-trash"></i></a></td>
 						</tr>
 						<?php
 					}

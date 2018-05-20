@@ -1,10 +1,9 @@
 <?php 
 if(isset($_GET['id'])){
-
 $sql = "SELECT a.*, b.ho_ten FROM cau_hoi a, thanh_vien b WHERE a.ten_dang_nhap = b.ten_dang_nhap and a.tinh_trang = 1 and id_chu_de='".$_GET['id']."' order by ngay_tao desc limit 10";	
 }else{
 
-$sql = "SELECT a.*, b.ho_ten FROM cau_hoi a, thanh_vien b WHERE a.ten_dang_nhap = b.ten_dang_nhap and a.tinh_trang = 1  order by ngay_tao desc limit 10";
+$sql = "SELECT a.*, b.ho_ten FROM cau_hoi a, thanh_vien b, chu_de c WHERE a.ten_dang_nhap = b.ten_dang_nhap and a.tinh_trang = 1 AND a.id_chu_de = c.id AND c.id_loai_tin = '".$_GET['id_loai_tin']."' order by ngay_tao desc limit 10";
 }
 $result  = mysqli_query($conn, $sql);
 $num_row = mysqli_num_rows($result);

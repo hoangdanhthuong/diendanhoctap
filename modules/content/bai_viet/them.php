@@ -1,5 +1,5 @@
 <?php
-$sql = "SELECT * FROM chu_de WHERE tinh_trang = 1 order by thu_tu";
+$sql = "SELECT * FROM chu_de WHERE tinh_trang = 1 AND `id_loai_tin` = 3 order by thu_tu";
 $result = mysqli_query($conn, $sql);
 ?>
 
