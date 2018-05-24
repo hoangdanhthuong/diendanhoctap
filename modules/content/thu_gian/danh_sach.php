@@ -33,7 +33,7 @@ $num_row = mysqli_num_rows($result);
 						<div class="col-sm-9 list-group-item  list-group-item-warning">
 							<div class="col-sm-9">
 								<a href="index.php?xem=baiviet&id=<?php echo $row['id']?>" class=""> <?php echo $row['tieu_de']?></a>
-								<p><b>Người hỏi:</b> <?php echo $row['ho_ten']?></p>
+								<p><b>Người đăng:</b> <?php echo $row['ho_ten']?></p>
 							</div>
 							<div class="col-sm-3">
 								<span class="pull-right">Ngày đăng<br/> <?php echo $row['ngay_tao']?></span>

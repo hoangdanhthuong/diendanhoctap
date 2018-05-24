@@ -12,15 +12,18 @@
 </head>
 <body>
 	<?php
-		include('admin/modules/config.php');
-		include('modules/navbar.php');
-		include('modules/main.php');
-		include('modules/footer_main.php');
-		
+	include('admin/modules/config.php');
+	include('modules/navbar.php');
+	include('modules/main.php');
+	include('modules/footer_main.php');
+
 	?>
 	<script src="jquery/jquery.min.js"></script>
 	<script src="jquery/myscript.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="admin/js/tinymce/js/tinymce/tinymce.min.js"></script>
+	<script>tinymce.init({ selector:'textarea' });</script>
+	</html>
 </body>
 </html>
 

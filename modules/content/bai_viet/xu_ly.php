@@ -29,8 +29,8 @@ if(mysqli_query($conn,$sql)){
 	header("location: ../../../index.php?xem=bai_viet&id_chu_de=".$chu_de);
 }else{
 	echo '<script type="text/javascript">
-	alert("Thêm bài viết không thành công!");
-	window.location = "../.././index.php?xem=baiviet&error=1";
+	alert("Thêm bài viết không thành công!'.$sql.'");
+	window.location = "../../../index.php?xem=bai_viet&error=1";
 	</script>';
 }
 

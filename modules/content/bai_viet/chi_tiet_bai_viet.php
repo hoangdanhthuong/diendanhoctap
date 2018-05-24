@@ -48,17 +48,16 @@ if (isset($_POST['gui'])) {
 						if(isset($_SESSION['dang_nhap_dien_dan'])){
 
 							?>
-							<form method="post" action="" enctype="mutilpart/form-data">
+							<form method="post" action="" enctype="mutilpart/form-data" id="form_binh_luan">
 								<div class="row form-group">
 									<label class="label-control col-md-1">
 										Nội dung
 									</label>
 									<div class="col-md-11">
-
-										<textarea class="form-control" name="noi_dung" placeholder="Nhập nội dung bình luận.." required></textarea>
+										<textarea class="form-control " name="noi_dung" placeholder="Nhập nội dung bình luận.." novalidate></textarea>
 									</div>
 									<div class="pull-right" style="margin-right: 10px;margin-top:10px; ">
-										<button type="submit" class="btn btn-succes" name="gui">Gửi</button>
+										<input type="submit" class="btn btn-succes" name="gui" value="Gửi">
 									</div>
 								</div>
 							</form>

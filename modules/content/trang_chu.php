@@ -1,7 +1,7 @@
 
 <?php
 session_start();
-$sql_new = "SELECT a.*, b.ho_ten FROM cau_hoi a, thanh_vien  b WHERE (a.ten_dang_nhap=b.ten_dang_nhap or b.email = a.ten_dang_nhap) and a.tinh_trang = 1 order by a.id desc limit 0,5";
+$sql_new = "SELECT a.*, b.ho_ten FROM cau_hoi a, thanh_vien  b, chu_de c WHERE (a.ten_dang_nhap=b.ten_dang_nhap or b.email = a.ten_dang_nhap) and a.tinh_trang = 1 AND c.id=a.id_chu_de AND c.id_loai_tin = 3 order by a.id desc limit 0,5";
 $result_new = mysqli_query($conn, $sql_new);
 $sql_xep_hang = "SELECT * FROM bang_xep_hang limit 0,5";
 $result_xep_hang = mysqli_query($conn, $sql_xep_hang);

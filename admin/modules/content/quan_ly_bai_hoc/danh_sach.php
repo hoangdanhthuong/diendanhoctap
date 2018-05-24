@@ -11,7 +11,7 @@ $result = mysqli_query($conn,$sql);
 		<div class="row">
 			<h3><a href="index.php?quanly=baihoc&ac=them"  class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i>Thêm</a></h3>
 		</div>
-		<div class="row">
+		<div class="row table-responsive">
 			<table class="table dataTable table-hover table-bordered" id="table_bai_hoc">
 				<thead class="bg-primary">
 					<tr class="text-center">

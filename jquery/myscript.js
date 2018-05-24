@@ -20,3 +20,4 @@
  $("#hinh_anh").change(function() {
  	readURL(this);
  });
+
