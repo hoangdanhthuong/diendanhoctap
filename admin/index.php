@@ -21,5 +21,14 @@
 <script src="../jquery/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="js/tinymce/js/tinymce/jquery.tinymce.min.js"></script>
 <script type="text/javascript" src="js/tinymce/js/tinymce/tinymce.min.js"></script>
-<script>tinymce.init({ selector:'textarea' });</script>
+<script>
+	tinymce.init({
+		selector: "textarea",
+		setup: function (editor) {
+			editor.on('change', function () {
+				editor.save();
+			});
+		}
+	});
+</script>
 </html>

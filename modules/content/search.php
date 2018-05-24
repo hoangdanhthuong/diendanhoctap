@@ -1,6 +1,6 @@
 <!-- modal search -->
 <div class="modal fade" id="modalSearch" role="dialog">
-	<div class="modal-dialog">
+	<div class="modal-dialog modal-lg">
 
 		<!-- Modal content-->
 		<div class="modal-content">
@@ -9,19 +9,19 @@
 				<h4 class="modal-title">Tìm kiếm</h4>
 			</div>
 			<div class="modal-body">
-				<form class="form-horizontal">
-					<div class="">
-						<div class="form-group form-horizontal">
-							<input type="text" class="" name="timkiem" placeholder="Nhập từ khóa..." style="width: 450px; height: 40px">
-							<input type="submit" value="Tìm" class=" btn btn-primary btn-lg">
-						</div>
+				<form class="form-horizontal" id="form_tim_kiem" action="modules/content/tim_kiem/xu_ly.php" method="post">
+					<div class="form-group form-horizontal">
+						<input type="text" class="form-control" name="timkiem" placeholder="Nhập bài học, câu hỏi..." >
+						<input type="submit" value="Tìm" class=" btn btn-primary btn-lg">
 					</div>
 				</form>
 			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			<div id="result_search">
+				
 			</div>
-
+			<div class="modal-footer" >
+				
+			</div>	
 			<!-- end modal search -->
 		</div>
 	</div>

@@ -20,6 +20,8 @@ if($tam == "dangky"){
 	include("modules/content/bai_viet/chi_tiet_bai_viet.php");
 }elseif($tam =="gioithieu"){
 	include("modules/content/gioi_thieu.php");
+}elseif($tam =="thanhvien"){
+	include("modules/content/thanh_vien/xu_ly.php");
 }elseif($tam =="thugian"){
 	include("modules/content/thu_gian/main.php");
 }elseif($tam =="tailieu"){

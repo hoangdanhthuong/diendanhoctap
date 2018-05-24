@@ -11,7 +11,7 @@ $result = mysqli_query($conn,$sql);
 		<div class="row">
 			<h3><a href="index.php?quanly=baihoc&ac=them"  class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i>Thêm</a></h3>
 		</div>
-		<div class="row">
+		<div class="row table-responsive">
 			<table class="table dataTable table-hover table-bordered" id="table_bai_hoc">
 				<thead class="bg-primary">
 					<tr class="text-center">
@@ -40,7 +40,7 @@ $result = mysqli_query($conn,$sql);
 							<td><?php echo $row['thu_tu']?></td>
 							<td><?php echo $row['tinh_trang']?></td>
 							<td><a href="index.php?quanly=baihoc&ac=sua&id=<?php echo $row['id']?>" class="btn_them" ><i class="glyphicon glyphicon-edit"></i></a></td>
-							<td><a href="modules/content/quan_ly_bai_hoc/xu_ly.php?id=<?php echo $row['id']?>" class="btn_xoa" ><i class="glyphicon glyphicon-trash"></i></a></td>
+							<td><a href="javascript:void(0)" id="btn_xoa_<?php echo $row['id']?>" ><i class="glyphicon glyphicon-trash"></i></a></td>
 						</tr>
 						<?php
 					}

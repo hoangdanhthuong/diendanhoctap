@@ -1,15 +1,15 @@
 <?php
 include_once('../../config.php');
-$tieu_de = trim($_POST['tieu_de']);
-$noi_dung = $_POST['noi_dung'];
-$link_video = $_POST['link_video'];
-$khoa_hoc = $_POST['khoa_hoc'];
-$thu_tu = $_POST['thu_tu'];
-$tinh_trang = $_POST['tinh_trang'];
 
-
-$sql_check = "SELECT * FROM bai_hoc WHERE ten = '".$tieu_de."' and id_khoa_hoc =".$khoa_hoc;
 if(isset($_POST['them'])){
+	$tieu_de = trim($_POST['tieu_de']);
+	$noi_dung = $_POST['noi_dung'];
+	$link_video = $_POST['link_video'];
+	$khoa_hoc = $_POST['khoa_hoc'];
+	$thu_tu = $_POST['thu_tu'];
+	$tinh_trang = $_POST['tinh_trang'];
+
+	$sql_check = "SELECT * FROM bai_hoc WHERE ten = '".$tieu_de."' and id_khoa_hoc =".$khoa_hoc;
 	if(check_input($conn, $sql_check)){
 		$sql = "INSERT INTO bai_hoc( ten, noi_dung, hinh_anh, link_video,  thu_tu, tinh_trang, id_khoa_hoc) VALUES ('".$tieu_de."','".$noi_dung."','".save_files('hinh_anh')."','".$link_video."','".$thu_tu."','".$tinh_trang."','".$khoa_hoc."')";
 		if(!mysqli_query($conn, $sql)){
@@ -22,30 +22,33 @@ if(isset($_POST['them'])){
 	}
 
 }elseif(isset($_POST['sua'])){
-	$id = $_GET['id'];
+	$id = $_POST['sua'];
+	$tieu_de = trim($_POST['tieu_de']);
+	$noi_dung = $_POST['noi_dung'];
+	$link_video = $_POST['link_video'];
+	$khoa_hoc = $_POST['khoa_hoc'];
+	$thu_tu = $_POST['thu_tu'];
+	$tinh_trang = $_POST['tinh_trang'];
 
+	$sql_check = "SELECT * FROM bai_hoc WHERE ten = '".$tieu_de."' and id_khoa_hoc =".$khoa_hoc;
 	if(check_input($conn, $sql_check, $id)){
 		$file_image = save_files('hinh_anh');
 		if( $file_image != ''){
-			$sql = "UPDATE bai_hoc SET ten='".$tieu_de."',noi_dung='".$noi_dung."',hinh_anh='".$file_image."',link_video='".$link_video."',ngay_tao='".date('Y-m-d')."',thu_tu='".$thu_tu."',tinh_trang='".$tinh_trang."',id_khoa_hoc='".$id_khoa_hoc."' WHERE id=".$id;
+			$sql = "UPDATE bai_hoc SET ten='".$tieu_de."',noi_dung='".$noi_dung."',hinh_anh='".$file_image."',link_video='".$link_video."',ngay_tao='".date('Y-m-d')."',thu_tu='".$thu_tu."',tinh_trang='".$tinh_trang."',id_khoa_hoc='".$khoa_hoc."' WHERE id=".$id;
 		}else{
-			$sql = "UPDATE bai_hoc SET ten='".$tieu_de."',noi_dung='".$noi_dung."', link_video='".$link_video."',ngay_tao='".date('Y-m-d')."',thu_tu='".$thu_tu."',tinh_trang='".$tinh_trang."',id_khoa_hoc='".$id_khoa_hoc."' WHERE id=".$id;
+			$sql = "UPDATE bai_hoc SET ten='".$tieu_de."',noi_dung='".$noi_dung."', link_video='".$link_video."',ngay_tao='".date('Y-m-d')."',thu_tu='".$thu_tu."',tinh_trang='".$tinh_trang."',id_khoa_hoc='".$khoa_hoc."' WHERE id=".$id;
 		}
-		
 		if(!mysqli_query($conn, $sql)){
-			header("location: ../../../index.php?quanly=baihoc&ac=sua&error=2");
-		}else{
-			move_uploaded_file($_FILES['hinh_anh']['tmp_name'], "uploads/".$file_image );
-			header("location: ../../../index.php?quanly=baihoc");
-		}
+			echo "Sửa bị lỗi!";
+		 }
 	}else{
-		header("location: ../../../index.php?quanly=baihoc&ac=sua&error=1");
+		echo "Sửa thất bại! Đã tồn tại bài học trong khóa học này!";
 	}
-}else{
-	$id = $_GET['id'];
+}elseif(isset($_POST['xoa'])){
+	$id = $_POST['xoa'];
 	$sql = "DELETE FROM bai_hoc WHERE id =".$id;
-	if(mysqli_query($conn, $sql)){
-		header("location: ../../../index.php?quanly=baihoc");
+	if(!mysqli_query($conn, $sql)){
+		echo "Xóa thất bại! Bài học còn chứa các bình luận.";
 	}
 }
 function check_input($conn, $sql, $id = -1){

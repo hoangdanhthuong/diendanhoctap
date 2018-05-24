@@ -20,3 +20,10 @@
  $("#hinh_anh").change(function() {
  	readURL(this);
  });
+
+$('#form_tim_kiem').submit(function(e){
+	$.post($(this).attr('action'), $(this).serialize(),function(data){
+		$('#result_search').html(data);
+	});
+	e.preventDefault();
+});

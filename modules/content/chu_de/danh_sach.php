@@ -5,7 +5,7 @@ $result = mysqli_query($conn, $sql);
 ?>
 <div class="container-fluid well" style="margin-top: 55px ;margin-bottom: 5px">
 	<div class="row " width ="100%">
-		<div class="col-sm-4">
+		<div class="col-sm-3">
 			<div class="container-fluid">
 				<div class="tieu_de row ">
 					<h3 class="bg-primary">Chủ đề</h3>

@@ -8,7 +8,7 @@
 	$num_row = mysqli_num_rows($result_tai_lieu);
 ?>
 
-<div class="col-sm-8">
+<div class="col-sm-9">
 	<div class="container-fluid row ">
 		<div class="tieu_de row text-center">
 			<h3 class="bg-primary" id="xep_hang">Tất cả tài liệu</h3>

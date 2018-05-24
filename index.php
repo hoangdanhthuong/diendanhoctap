@@ -9,8 +9,9 @@
 	<link rel="stylesheet" type="text/css" href="style/login.css">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/style_footer.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
-<body>
+<body style="font-family: 'Roboto', sans-serif;">
 	<?php
 		include('admin/modules/config.php');
 		include('modules/navbar.php');

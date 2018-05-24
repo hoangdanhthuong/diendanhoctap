@@ -136,3 +136,22 @@ footer {
 .noi_dung{
   font-size: 24px;
 }
+.list_kh .list-khoa-hoc{
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s;
+    border-bottom: 3px solid #17aa1c;
+    box-shadow: 0 0 5px rgba(0,40,53,.3);
+}
+.list-khoa-hoc a:hover{
+  text-decoration: none;
+}
+.list-khoa-hoc a:hover p{
+  color: #00199c;
+}
+.list_kh .list-khoa-hoc a img{
+  transition: all .5s ease-in-out;
+}
+.list_kh .list-khoa-hoc a img:hover{
+  transform: scale(1.1);
+}

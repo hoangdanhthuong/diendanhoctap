@@ -21,12 +21,15 @@ $num_row = mysqli_num_rows($result);
 					while ($row = mysqli_fetch_assoc($result)) {
 						$images = explode( ':',$row['hinh_anh']);
 						?>
-						<div class="col-sm-4" style="position: relative;height: 300px;">
-							<div class="thumbnail" >
+						<div class="col-sm-3 list_kh" style="position: relative;height: 300px;">
+							<div class="thumbnail list-khoa-hoc" >
 								<a href="index.php?xem=chitietbaihoc&id=<?php echo $row['id']?>">
-									<img src="<?php echo $target.$images[0]?>" alt="Lights"  class="img-responsive" style=" position: relative; min-height: 200px;height: 180px;width: 100%;">
-									<div class="caption">
-										<p style="font-weight: bold; font-size: 16px; height: 35px"><?php echo $row['ten']?></p>
+									<div style="position: relative;overflow: hidden;">
+										<img src="<?php echo $target.$images[0]?>" alt="Lights"  class="img-responsive" style=" position: relative; min-height: 200px;height: 180px;width: 100%;">
+									</div>
+									
+									<div class="caption" style="color: #000;">
+										<p style="font-weight: 500; font-size: 1.2em; height: 35px"><?php echo $row['ten']?></p>
 									</div>
 								</a>
 							</div>
